@@ -1,0 +1,44 @@
+[
+  {
+    "query": "统计 2025 年第一季度各大区的 GMV",
+    "expected_agent": "analytics_sql"
+  },
+  {
+    "query": "GMV 是多少？",
+    "expected_agent": "analytics_sql"
+  },
+  {
+    "query": "按商品品类统计 3 月销量排行",
+    "expected_agent": "analytics_sql"
+  },
+  {
+    "query": "华东地区去年销售额同比增长多少",
+    "expected_agent": "analytics_sql"
+  },
+  {
+    "query": "fact_order 有哪些字段？",
+    "expected_agent": "catalog_qa"
+  },
+  {
+    "query": "GMV 的统计口径是什么？",
+    "expected_agent": "catalog_qa"
+  },
+  {
+    "query": "dim_region 表里 region_name 是什么含义",
+    "expected_agent": "catalog_qa"
+  },
+  {
+    "query": "AOV 怎么计算？",
+    "expected_agent": "catalog_qa"
+  },
+  {
+    "query": "GMV",
+    "expected_agent": null,
+    "allow_low_confidence": true
+  },
+  {
+    "query": "这个指标",
+    "expected_agent": null,
+    "allow_low_confidence": true
+  }
+]

@@ -1,0 +1,46 @@
+logging:
+  file:
+    enable: true
+    level: INFO
+    path: logs
+    rotation: "10 MB"
+    retention: "7 days"
+  console:
+    enable: true
+    level: INFO
+
+db_meta:
+  host: ${oc.env:META_DB_HOST,localhost}
+  port: ${oc.env:META_DB_PORT,3306}
+  user: ${oc.env:META_DB_USER,didilili}
+  password: ${oc.env:META_DB_PASSWORD,''}
+  database: ${oc.env:META_DB_NAME,meta}
+  pool_size: ${oc.env:META_DB_POOL_SIZE,20}
+
+db_dw:
+  host: ${oc.env:DW_DB_HOST,localhost}
+  port: ${oc.env:DW_DB_PORT,3306}
+  user: ${oc.env:DW_DB_USER,didilili}
+  password: ${oc.env:DW_DB_PASSWORD,''}
+  database: ${oc.env:DW_DB_NAME,dw}
+  pool_size: ${oc.env:DW_DB_POOL_SIZE,20}
+
+qdrant:
+  host: ${oc.env:QDRANT_HOST,localhost}
+  port: ${oc.env:QDRANT_PORT,6333}
+  embedding_size: 1024
+
+embedding:
+  host: ${oc.env:EMBEDDING_HOST,localhost}
+  port: ${oc.env:EMBEDDING_PORT,8081}
+  model: BAAI/bge-large-zh-v1.5
+
+es:
+  host: ${oc.env:ES_HOST,localhost}
+  port: ${oc.env:ES_PORT,9200}
+  index_name: data_agent
+
+llm:
+  model_name: ${oc.env:LLM_MODEL_NAME,Pro/zai-org/GLM-5.1}
+  api_key: ${oc.env:LLM_API_KEY,''}
+  base_url: ${oc.env:LLM_BASE_URL,https://api.siliconflow.cn/v1}
